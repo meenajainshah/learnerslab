@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mesa Future Founders Summer School 2026 · Learners Lab</title>
+<meta name="description" content="A 2-week intensive where teens build real businesses — not slides. Grades 9–12, Bangalore, three cohorts in summer 2026. By Mesa School." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --cream: #f5f2ee;
+    --cream-deep: #ede8e0;
+    --paper: #fbf9f5;
+    --ink: #1a1a1a;
+    --ink-soft: #3a3a3a;
+    --mute: #6b6b6b;
+    --line: #d8d3c8;
+    --line-soft: #e5e0d4;
+    --forest: #1f3d2f;
+    --rust: #c94a1a;
+    --rust-deep: #a83d15;
+    --sun: #e8b84a;
+    --moss: #6a9b5f;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+  .wrap { max-width: 1060px; margin: 0 auto; padding: 0 24px; }
+
+  /* Top bar */
+  .topbar {
+    border-bottom: 1px solid var(--line);
+    padding: 18px 0;
+    background: rgba(245, 242, 238, 0.92);
+    backdrop-filter: blur(8px);
+    position: sticky; top: 0; z-index: 50;
+  }
+  .topbar-inner {
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  }
+  .brand {
+    font-family: 'Instrument Serif', serif;
+    font-size: 22px; font-style: italic;
+    letter-spacing: -0.01em;
+    color: var(--ink); text-decoration: none;
+  }
+  .brand-dot {
+    display: inline-block; width: 7px; height: 7px;
+    border-radius: 50%; background: var(--rust);
+    margin-right: 8px; vertical-align: middle;
+  }
+  .topbar-meta {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px; color: var(--mute); letter-spacing: 0.03em;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 64px 0 56px;
+    border-bottom: 1px solid var(--line);
+  }
+  .kicker {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px; letter-spacing: 0.18em;
+    color: var(--rust); text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  h1 {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(38px, 6vw, 64px);
+    line-height: 1.04;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+    margin-bottom: 24px;
+    max-width: 900px;
+  }
+  h1 em { font-style: italic; color: var(--forest); }
+  .hero-sub {
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    max-width: 620px;
+    margin-bottom: 32px;
+  }
+  .hero-facts {
+    display: flex; flex-wrap: wrap; gap: 32px;
+    padding-top: 24px;
+    border-top: 1px dashed var(--line);
+  }
+  .fact {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px; color: var(--mute);
+  }
+  .fact b {
+    display: block;
+    font-family: 'Instrument Serif', serif;
+    font-size: 22px; color: var(--ink);
+    font-weight: 400;
+    margin-bottom: 2px;
+  }
+
+  /* Section */
+  .section {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px; letter-spacing: 0.14em;
+    color: var(--rust); text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .section h2 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 32px; font-weight: 400;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+    margin-bottom: 28px;
+    max-width: 720px;
+  }
+  .section h2 em { font-style: italic; color: var(--forest); }
+
+  /* Cohort cards */
+  .cohorts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+  .cohort {
+    background: var(--paper);
+    border: 1px solid var(--line-soft);
+    border-radius: 6px;
+    padding: 22px 24px;
+    position: relative;
+  }
+  .cohort-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    color: var(--mute);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .cohort-dates {
+    font-family: 'Instrument Serif', serif;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+    margin-bottom: 6px;
+  }
+  .cohort-meta {
+    font-size: 13px;
+    color: var(--mute);
+  }
+
+  /* Outcomes */
+  .outcomes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+  }
+  .outcome {
+    background: var(--paper);
+    border: 1px solid var(--line-soft);
+    border-left: 3px solid var(--rust);
+    border-radius: 4px;
+    padding: 20px;
+  }
+  .outcome-stat {
+    font-family: 'Instrument Serif', serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--ink);
+    line-height: 1.1;
+    margin-bottom: 6px;
+  }
+  .outcome-stat em {
+    font-style: italic;
+    color: var(--forest);
+  }
+  .outcome-desc {
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+
+  /* Phases */
+  .phases {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+  .phase {
+    background: var(--paper);
+    border: 1px solid var(--line-soft);
+    border-radius: 6px;
+    padding: 24px;
+  }
+  .phase-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--rust);
+    letter-spacing: 0.1em;
+    margin-bottom: 12px;
+  }
+  .phase-title {
+    font-family: 'Instrument Serif', serif;
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 6px;
+  }
+  .phase-days {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--mute);
+    letter-spacing: 0.04em;
+    margin-bottom: 14px;
+  }
+  .phase-desc {
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 1.55;
+    margin-bottom: 14px;
+  }
+  .phase-proof {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--forest);
+    line-height: 1.4;
+    padding-top: 12px;
+    border-top: 1px dashed var(--line);
+  }
+
+  /* Two column */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 56px;
+    align-items: start;
+  }
+  .incl-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .incl-list li {
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    padding-left: 20px;
+    position: relative;
+  }
+  .incl-list li::before {
+    content: '✻';
+    position: absolute;
+    left: 0; top: 0;
+    color: var(--rust);
+    font-family: 'Instrument Serif', serif;
+  }
+  .incl-list li strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  .price-box {
+    background: var(--forest);
+    color: var(--cream);
+    padding: 32px 28px;
+    border-radius: 8px;
+    position: sticky;
+    top: 84px;
+  }
+  .price-box-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    color: rgba(245, 242, 238, 0.6);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .price-box-main {
+    font-family: 'Instrument Serif', serif;
+    font-size: 44px;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .price-box-note {
+    font-size: 12px;
+    color: rgba(245, 242, 238, 0.7);
+    margin-bottom: 20px;
+  }
+  .price-box-scholar {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 15px;
+    color: var(--sun);
+    padding: 12px 0;
+    margin-bottom: 20px;
+    border-top: 1px solid rgba(245, 242, 238, 0.15);
+    border-bottom: 1px solid rgba(245, 242, 238, 0.15);
+  }
+  .price-box-add {
+    font-size: 13px;
+    color: rgba(245, 242, 238, 0.75);
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+  .price-box-add strong { color: var(--cream); font-weight: 600; }
+  .apply-btn {
+    display: block;
+    text-align: center;
+    padding: 14px 20px;
+    background: var(--sun);
+    color: var(--forest);
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: transform 0.15s ease;
+  }
+  .apply-btn:hover { transform: translateY(-1px); }
+  .apply-contact {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    color: rgba(245, 242, 238, 0.65);
+    margin-top: 12px;
+    font-family: 'DM Mono', monospace;
+  }
+  .apply-contact a { color: var(--sun); text-decoration: none; }
+
+  /* Who for */
+  .who {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  .who-item {
+    padding: 18px 20px;
+    background: var(--paper);
+    border: 1px solid var(--line-soft);
+    border-radius: 4px;
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 1.45;
+  }
+  .who-item strong {
+    display: block;
+    font-family: 'Instrument Serif', serif;
+    font-weight: 400;
+    font-size: 17px;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+
+  /* Mentors */
+  .mentors-intro {
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+    margin-bottom: 24px;
+    max-width: 680px;
+  }
+  .mentor-groups {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+  .mentor-group h3 {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--rust);
+    margin-bottom: 12px;
+    font-weight: 500;
+  }
+  .mentor-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .mentor-list li {
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 1.4;
+  }
+  .mentor-list li strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+  .mentor-list li span {
+    color: var(--mute);
+    font-size: 12px;
+  }
+
+  /* Process */
+  .process {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  .step {
+    padding: 20px;
+    background: var(--paper);
+    border: 1px solid var(--line-soft);
+    border-radius: 4px;
+    position: relative;
+  }
+  .step-num {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 32px;
+    color: var(--rust);
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  .step-title {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 4px;
+    color: var(--ink);
+  }
+  .step-desc {
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+
+  /* Honest flag */
+  .honest {
+    background: var(--paper);
+    border: 1px solid var(--line-soft);
+    border-left: 3px solid var(--sun);
+    padding: 20px 24px;
+    border-radius: 4px;
+    margin-top: 40px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .honest-icon {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 20px;
+    color: var(--rust);
+    line-height: 1;
+    margin-top: 2px;
+    flex-shrink: 0;
+  }
+  .honest-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+  }
+  .honest-text strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  /* Footer */
+  footer {
+    padding: 48px 0 32px;
+  }
+  .foot-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 32px;
+  }
+  .foot-brand {
+    font-family: 'Instrument Serif', serif;
+    font-size: 24px; font-style: italic;
+    margin-bottom: 8px;
+  }
+  .foot-desc {
+    font-size: 13px; color: var(--mute);
+    line-height: 1.6;
+  }
+  .foot-col h5 {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--mute);
+    margin-bottom: 12px; font-weight: 500;
+  }
+  .foot-col a, .foot-col span {
+    display: block;
+    font-size: 13px; color: var(--ink-soft);
+    text-decoration: none;
+    margin-bottom: 6px;
+  }
+  .foot-col a:hover { color: var(--rust); }
+  .foot-bottom {
+    display: flex; justify-content: space-between; align-items: center;
+    padding-top: 20px; border-top: 1px solid var(--line-soft);
+    font-family: 'DM Mono', monospace;
+    font-size: 11px; color: var(--mute); letter-spacing: 0.03em;
+  }
+  .foot-bottom a { color: var(--mute); text-decoration: none; }
+
+  @media (max-width: 760px) {
+    .hero { padding: 44px 0 40px; }
+    .cohorts, .phases, .who, .process { grid-template-columns: 1fr; }
+    .two-col { grid-template-columns: 1fr; gap: 28px; }
+    .mentor-groups { grid-template-columns: 1fr; }
+    .price-box { position: static; }
+    .foot-grid { grid-template-columns: 1fr; gap: 28px; }
+    .foot-bottom { flex-direction: column; gap: 8px; align-items: flex-start; }
+    h1 { font-size: 36px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a href="/" class="brand"><span class="brand-dot"></span>Learners Lab</a>
+    <div class="topbar-meta">Mesa · Future Founders · Summer 2026</div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="kicker">For young founders · grades 9–12</div>
+    <h1>Build a real business <em>in two weeks.</em> Not slides.</h1>
+    <p class="hero-sub">
+      Mesa's Future Founders Summer School is a 2-week intensive in Bangalore where high-schoolers get ₹50,000 capital per team, access to 10+ AI tools, and direct mentorship from founders to actually launch a business. Ends with a Demo Day pitch to top VCs.
+    </p>
+    <div class="hero-facts">
+      <div class="fact"><b>2 wks</b>in-person, Bangalore</div>
+      <div class="fact"><b>9–5</b>daily sessions</div>
+      <div class="fact"><b>₹50k</b>per team to build</div>
+      <div class="fact"><b>₹5L</b>top prize on Demo Day</div>
+    </div>
+  </div>
+</section>
+
+<!-- Cohorts -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-label">Upcoming cohorts</div>
+    <h2>Three dates this <em>summer.</em> Limited seats per cohort.</h2>
+    <div class="cohorts">
+      <div class="cohort">
+        <div class="cohort-num">Cohort 01</div>
+        <div class="cohort-dates">20 May — 2 Jun</div>
+        <div class="cohort-meta">2 weeks · Bangalore campus</div>
+      </div>
+      <div class="cohort">
+        <div class="cohort-num">Cohort 02</div>
+        <div class="cohort-dates">10 Jun — 23 Jun</div>
+        <div class="cohort-meta">2 weeks · Bangalore campus</div>
+      </div>
+      <div class="cohort">
+        <div class="cohort-num">Cohort 03</div>
+        <div class="cohort-dates">24 Jun — 7 Jul</div>
+        <div class="cohort-meta">2 weeks · Bangalore campus</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Outcomes -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-label">What they leave with</div>
+    <h2>Not just a certificate. <em>Proof of work.</em></h2>
+    <div class="outcomes">
+      <div class="outcome">
+        <div class="outcome-stat"><em>₹1L+</em></div>
+        <div class="outcome-desc">Real revenue — earned online, offline, and at a flea market with actual customers.</div>
+      </div>
+      <div class="outcome">
+        <div class="outcome-stat">Live brand</div>
+        <div class="outcome-desc">A live D2C brand with website, payment integration, ads, and real traction.</div>
+      </div>
+      <div class="outcome">
+        <div class="outcome-stat">Demo Day</div>
+        <div class="outcome-desc">Pitch to top VCs and founders. Top teams win cash prizes up to ₹5L.</div>
+      </div>
+      <div class="outcome">
+        <div class="outcome-stat">LOR</div>
+        <div class="outcome-desc">Entrepreneurship certificate for all. Top students get LORs from mentors.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Structure -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-label">How the 2 weeks run</div>
+    <h2>Validate. Launch. <em>Sell.</em></h2>
+    <div class="phases">
+      <div class="phase">
+        <div class="phase-num">Phase 01</div>
+        <div class="phase-title">Validate &amp; Build</div>
+        <div class="phase-days">Day 1–4</div>
+        <div class="phase-desc">Identify a problem, shape the idea, build the brand, and ship a live website with payments.</div>
+        <div class="phase-proof">Proof: a launch-ready D2C brand with complete branding and a live website.</div>
+      </div>
+      <div class="phase">
+        <div class="phase-num">Phase 02</div>
+        <div class="phase-title">Launch &amp; Traction</div>
+        <div class="phase-days">Day 5–9</div>
+        <div class="phase-desc">Run Meta &amp; Instagram ad campaigns, publish AI-powered reels, nail pricing, map competitors.</div>
+        <div class="phase-proof">Proof: ₹10,000 real revenue from online sales and on-ground marketing.</div>
+      </div>
+      <div class="phase">
+        <div class="phase-num">Phase 03</div>
+        <div class="phase-title">Sell &amp; Pitch</div>
+        <div class="phase-days">Day 10–14</div>
+        <div class="phase-desc">Close real customers, run a flea market stall, refine the pitch, and face top VCs on Demo Day.</div>
+        <div class="phase-proof">Proof: ₹1L+ total revenue and a Demo Day pitch to Top VCs.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Price + What's included -->
+<section class="section">
+  <div class="wrap">
+    <div class="two-col">
+      <div>
+        <div class="section-label">What's included</div>
+        <h2>Everything to actually <em>build.</em></h2>
+        <ul class="incl-list">
+          <li><strong>₹50,000 per team</strong> — real capital to develop your product and acquire customers.</li>
+          <li><strong>10+ AI tools</strong> — used across building, design, marketing.</li>
+          <li><strong>20+ hours of masterclasses</strong> — led by industry operators and founders.</li>
+          <li><strong>1:1 mentorship</strong> — direct guidance from people who've built companies.</li>
+          <li><strong>All meals</strong> — three a day, for the full 14 days.</li>
+          <li><strong>100% revenue ownership</strong> — everything the team earns, the team keeps.</li>
+          <li><strong>Portfolio website</strong> — a shareable portfolio site for every student.</li>
+        </ul>
+      </div>
+      <div>
+        <div class="price-box">
+          <div class="price-box-label">Programme fee</div>
+          <div class="price-box-main">₹1.5L</div>
+          <div class="price-box-note">incl. 18% GST</div>
+          <div class="price-box-scholar">✻ Scholarships up to ₹30,000 for exceptional applicants</div>
+          <div class="price-box-add">
+            <strong>Accommodation (optional):</strong><br>
+            ₹12,000 for 6-share dorm<br>
+            ₹25,000 for double-share
+          </div>
+          <a href="https://mesaschool.co" target="_blank" rel="noopener" class="apply-btn">Visit Mesa School →</a>
+          <div class="apply-contact">
+            Mesa handles all applications directly
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Who it's for -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-label">Built for</div>
+    <h2>Teens who'd rather <em>build</em> than just study.</h2>
+    <div class="who">
+      <div class="who-item"><strong>Ivy League &amp; global college aspirants</strong>Who need proof of initiative, not just marks.</div>
+      <div class="who-item"><strong>Future builders &amp; founders</strong>Who already have ideas but don't know where to start.</div>
+      <div class="who-item"><strong>High achievers wanting an edge</strong>Who want something real to talk about in applications.</div>
+      <div class="who-item"><strong>Hands-on, practical learners</strong>Who learn by doing, not by listening.</div>
+      <div class="who-item"><strong>Curious about AI</strong>Who want to use modern tools, not just understand them.</div>
+      <div class="who-item"><strong>Keen on early industry exposure</strong>Who want to meet real founders and operators.</div>
+    </div>
+  </div>
+</section>
+
+<!-- Mentors -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-label">Who teaches &amp; mentors</div>
+    <h2>Founders, operators, <em>investors</em>.</h2>
+    <p class="mentors-intro">Guest lectures and 1:1 mentorship from founders and operators at Urban Company, Shaadi.com, CRED, Paytm, Agoda, Sugar Cosmetics, Blume Ventures, Nexus VP, Antler — and many more across entrepreneurship, technology, marketing, and investing.</p>
+
+    <div class="mentor-groups">
+      <div class="mentor-group">
+        <h3>Entrepreneurship</h3>
+        <ul class="mentor-list">
+          <li><strong>Anupam Mittal</strong> — <span>Founder &amp; CEO, Shaadi.com</span></li>
+          <li><strong>Varun Khaitan</strong> — <span>Co-Founder, Urban Company</span></li>
+          <li><strong>Bert Mueller</strong> — <span>Founder, California Burrito</span></li>
+          <li><strong>Arjun Vaidya</strong> — <span>Co-founder, V3 Ventures</span></li>
+        </ul>
+      </div>
+      <div class="mentor-group">
+        <h3>Investors on campus</h3>
+        <ul class="mentor-list">
+          <li><strong>Kunal Shah</strong> — <span>CRED · Sequoia Capital Advisor</span></li>
+          <li><strong>Vijay Shekhar Sharma</strong> — <span>Founder, Paytm</span></li>
+          <li><strong>Sajith Pai</strong> — <span>Partner, Blume Ventures</span></li>
+          <li><strong>Pratik Poddar</strong> — <span>Partner, Nexus VP</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Selection -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-label">Mesa's admission process</div>
+    <h2>Mesa's admission is <em>selective.</em> Four steps.</h2>
+    <div class="process">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-title">Register interest</div>
+        <div class="step-desc">A short form on Mesa's site.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-title">Video application</div>
+        <div class="step-desc">Tell Mesa what excites you about the programme.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-title">Interview</div>
+        <div class="step-desc">Conversation with Mesa's admissions team.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-title">Acceptance letter</div>
+        <div class="step-desc">Official email from Mesa with next steps.</div>
+      </div>
+    </div>
+
+    <div class="honest">
+      <span class="honest-icon">※</span>
+      <div class="honest-text">
+        <strong>One thing to know before you go:</strong> Mesa charges ₹1.5L — premium pricing for a premium programme. They're offering scholarships up to ₹30,000 for strong applicants since this is their founding cohort. Worth asking about early, directly on their site.
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">Learners Lab</div>
+        <p class="foot-desc">A discovery layer for programs, workshops and summer camps. Helping parent communities find the right experiences for their children — without combing through PDFs.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Mesa</h5>
+        <a href="https://mesaschool.co" target="_blank" rel="noopener">mesaschool.co ↗</a>
+      </div>
+      <div class="foot-col">
+        <h5>Learners Lab</h5>
+        <a href="/">Home — all providers</a>
+        <a href="/vascsc">VASCSC Summer 2026</a>
+        <a href="/inme">INME Spring &amp; Summer 2026</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>Curated by Learners Lab · Programme run by Mesa School</div>
+      <div>Built with <a href="https://iviewlabs.com" target="_blank" rel="noopener">iView Labs</a></div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
