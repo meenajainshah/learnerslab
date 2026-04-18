@@ -1,158 +1,440 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VASCSC Summer 2026 — Find the Right Program</title>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;800;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Learners Lab — Programs &amp; Camps for Kids</title>
+<meta name="description" content="A small, growing list of programs, workshops and summer camps worth knowing about. Made for our parent communities." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
 <style>
-:root{--cream:#FDFAF5;--white:#fff;--navy:#141C2E;--navy-soft:#2C3654;--orange:#F05A28;--orange-light:#FFF0EB;--teal:#0D9488;--teal-light:#E6FAF8;--border:#E8E3DA;--muted:#7A7670;--text:#1E1B16;--astronomy:#3B82F6;--biology:#16A34A;--chemistry:#EA580C;--emerging:#7C3AED;--mathematics:#CA8A04;--rocketry:#DB2777;--physics:#0891B2;--fun:#D97706}
-*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text);font-size:15px;line-height:1.5}
-nav{position:sticky;top:0;z-index:50;background:rgba(253,250,245,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:56px}.nav-brand{display:flex;align-items:center;gap:10px}.nav-logo{font-family:'Fraunces',serif;font-size:16px;font-weight:800;color:var(--navy);letter-spacing:-0.02em}.nav-logo span{color:var(--orange)}.nav-partner{font-size:11px;color:var(--muted);padding:2px 8px;border:1px solid var(--border);border-radius:100px}.nav-helpline{font-size:12px;color:var(--muted)}.nav-helpline strong{color:var(--text)}
-.hero{background:var(--navy);color:white;padding:48px 24px 56px;text-align:center;position:relative;overflow:hidden}.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 100%,rgba(240,90,40,0.15) 0%,transparent 70%)}.hero-badge{display:inline-block;background:rgba(240,90,40,0.15);border:1px solid rgba(240,90,40,0.3);color:#FFA07A;font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:5px 14px;border-radius:100px;margin-bottom:20px}.hero h1{font-family:'Fraunces',serif;font-size:clamp(28px,5vw,52px);font-weight:900;line-height:1.08;letter-spacing:-0.02em;margin-bottom:14px}.hero h1 em{font-style:normal;color:#FFA07A}.hero-sub{color:rgba(255,255,255,0.6);font-size:15px;max-width:420px;margin:0 auto 32px}.hero-pills{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}.hero-pill{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);color:rgba(255,255,255,0.75);font-size:12px;padding:6px 14px;border-radius:100px}
-.finder{max-width:760px;margin:-28px auto 0;background:var(--white);border:1px solid var(--border);border-radius:20px;box-shadow:0 8px 40px rgba(0,0,0,0.08);padding:28px 28px 24px;position:relative;z-index:10}.finder-title{font-family:'Fraunces',serif;font-size:17px;font-weight:700;margin-bottom:18px;color:var(--navy)}.finder-title span{color:var(--orange)}.std-label{font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}.std-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:20px}.std-btn{padding:10px 6px;border-radius:10px;border:1.5px solid var(--border);background:var(--cream);color:var(--navy-soft);font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;cursor:pointer;transition:all 0.15s;text-align:center}.std-btn:hover{border-color:var(--orange);color:var(--orange)}.std-btn.active{background:var(--orange);border-color:var(--orange);color:white}.std-btn small{display:block;font-size:10px;font-weight:400;opacity:0.7;margin-top:2px}.interest-label{font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}.interest-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}.chip{padding:7px 14px;border-radius:100px;border:1.5px solid var(--border);background:var(--cream);color:var(--navy-soft);font-size:13px;font-weight:500;cursor:pointer;transition:all 0.15s}.chip:hover{border-color:var(--navy);color:var(--navy)}.chip.active{background:var(--navy);border-color:var(--navy);color:white}.finder-cta{display:flex;align-items:center;gap:12px}.btn-find{background:var(--orange);color:white;font-family:'Fraunces',serif;font-weight:700;font-size:15px;padding:13px 28px;border-radius:10px;border:none;cursor:pointer;transition:opacity 0.15s}.btn-find:hover{opacity:0.88}.finder-hint{font-size:12px;color:var(--muted)}
-.results-section{max-width:1100px;margin:48px auto;padding:0 24px}.results-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;flex-wrap:wrap;gap:12px}.results-count{font-family:'Fraunces',serif;font-size:22px;font-weight:800;color:var(--navy)}.results-count span{color:var(--orange)}.results-meta{font-size:13px;color:var(--muted)}.clear-btn{font-size:12px;color:var(--orange);background:none;border:none;cursor:pointer;text-decoration:underline}.program-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}.empty-state{grid-column:1/-1;text-align:center;padding:60px 20px;color:var(--muted)}.empty-state .emoji{font-size:40px;margin-bottom:12px}
-.prog-card{background:var(--white);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:box-shadow 0.2s,transform 0.2s;display:flex;flex-direction:column}.prog-card:hover{box-shadow:0 8px 32px rgba(0,0,0,0.09);transform:translateY(-2px)}.card-color-bar{height:4px}.card-inner{padding:18px 20px 16px;flex:1;display:flex;flex-direction:column}.card-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px}.cat-tag{font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:3px 9px;border-radius:100px}.seats-info{font-size:11px;color:var(--muted)}.card-title{font-family:'Fraunces',serif;font-size:16px;font-weight:700;line-height:1.25;color:var(--navy);margin-bottom:7px}.card-desc{font-size:12.5px;color:var(--muted);line-height:1.5;margin-bottom:14px;flex:1}.card-details{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px}.detail{font-size:11px}.detail-label{color:var(--muted);margin-bottom:1px;text-transform:uppercase;letter-spacing:0.05em;font-size:10px}.detail-value{font-weight:600;color:var(--text);font-size:12px}.card-batches{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:16px}.batch-chip{font-size:10px;padding:3px 8px;border-radius:5px;background:var(--cream);border:1px solid var(--border);color:var(--muted)}.skill-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:14px}.skill-tag{font-size:10px;font-weight:600;padding:3px 9px;border-radius:100px;background:rgba(13,148,136,0.08);border:1px solid rgba(13,148,136,0.2);color:var(--teal);letter-spacing:0.03em}.card-footer{padding:12px 20px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}.card-fee{font-family:'Fraunces',serif;font-size:20px;font-weight:800;color:var(--navy)}.card-fee small{font-family:'DM Sans',sans-serif;font-size:11px;font-weight:400;color:var(--muted)}.btn-enroll{background:var(--orange);color:white;font-family:'DM Sans',sans-serif;font-weight:600;font-size:13px;padding:9px 18px;border-radius:8px;border:none;cursor:pointer;transition:opacity 0.15s}.btn-enroll:hover{opacity:0.88}
-.astronomy{background:#EFF6FF;color:#1D4ED8}.astronomy-bar{background:#3B82F6}.biology{background:#F0FDF4;color:#15803D}.biology-bar{background:#16A34A}.chemistry{background:#FFF7ED;color:#C2410C}.chemistry-bar{background:#EA580C}.emerging{background:#F5F3FF;color:#6D28D9}.emerging-bar{background:#7C3AED}.mathematics{background:#FEFCE8;color:#A16207}.mathematics-bar{background:#CA8A04}.rocketry{background:#FDF2F8;color:#BE185D}.rocketry-bar{background:#DB2777}.physics{background:#ECFEFF;color:#0E7490}.physics-bar{background:#0891B2}.fun{background:#FFFBEB;color:#B45309}.fun-bar{background:#D97706}
-.info-strip{background:var(--teal-light);border-top:1px solid #99F6E4;border-bottom:1px solid #99F6E4;padding:20px 24px;display:flex;gap:32px;flex-wrap:wrap;justify-content:center;align-items:center}.info-item{display:flex;align-items:center;gap:8px;font-size:13px}.info-item .icon{font-size:18px}.info-item strong{color:var(--teal)}
-.overlay{display:none;position:fixed;inset:0;z-index:100;background:rgba(20,28,46,0.6);backdrop-filter:blur(6px);padding:16px;align-items:center;justify-content:center}.overlay.open{display:flex}.modal{background:var(--white);border-radius:20px;width:100%;max-width:520px;max-height:92vh;overflow-y:auto;box-shadow:0 24px 80px rgba(0,0,0,0.2)}.modal-top{padding:24px 24px 20px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:flex-start}.modal-prog-name{font-family:'Fraunces',serif;font-size:18px;font-weight:800;color:var(--navy);margin-bottom:4px}.modal-prog-meta{font-size:12px;color:var(--muted)}.modal-close{width:30px;height:30px;border-radius:8px;background:var(--cream);border:1px solid var(--border);font-size:16px;cursor:pointer;color:var(--muted);display:flex;align-items:center;justify-content:center;flex-shrink:0}.modal-body{padding:22px 24px 28px}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}.form-group{margin-bottom:14px}.form-group.wide{grid-column:1/-1}label{display:block;font-size:11px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}input,select,textarea{width:100%;background:var(--cream);border:1.5px solid var(--border);border-radius:8px;padding:10px 13px;font-family:'DM Sans',sans-serif;font-size:14px;color:var(--text);outline:none;transition:border-color 0.15s}input:focus,select:focus,textarea:focus{border-color:var(--orange)}textarea{resize:none}.consent{font-size:11.5px;color:var(--muted);line-height:1.5;margin:16px 0}.btn-submit{width:100%;background:var(--orange);color:white;font-family:'Fraunces',serif;font-weight:800;font-size:16px;padding:15px;border-radius:10px;border:none;cursor:pointer;transition:opacity 0.15s}.btn-submit:hover{opacity:0.88}
-.success{display:none;text-align:center;padding:40px 24px 32px}.success-emoji{font-size:48px;margin-bottom:16px}.success-title{font-family:'Fraunces',serif;font-size:22px;font-weight:800;color:var(--navy);margin-bottom:8px}.success-body{font-size:14px;color:var(--muted);line-height:1.6}.success-card{background:var(--cream);border:1px solid var(--border);border-radius:12px;padding:16px;margin:20px 0;text-align:left;font-size:13px;line-height:1.7}.success-card strong{color:var(--navy)}.btn-back{background:var(--navy);color:white;font-family:'Fraunces',serif;font-weight:700;font-size:14px;padding:12px 28px;border-radius:10px;border:none;cursor:pointer;margin-top:8px}
-footer{background:var(--navy);color:rgba(255,255,255,0.6);padding:40px 24px 32px;text-align:center}.footer-logo{font-family:'Fraunces',serif;font-size:18px;font-weight:800;color:white;margin-bottom:8px}.footer-logo span{color:#FFA07A}.footer-powered{font-size:11px;color:rgba(255,255,255,0.35);margin-top:6px}.footer-powered a{color:rgba(255,255,255,0.5);text-decoration:none}footer p{font-size:13px;line-height:1.7}footer a{color:rgba(255,255,255,0.6)}
-@media(max-width:640px){.std-grid{grid-template-columns:repeat(3,1fr)}.form-row{grid-template-columns:1fr}.finder{padding:20px 16px 18px;margin:-20px 12px 0;border-radius:16px}.results-section{padding:0 12px}.nav-partner{display:none}.info-strip{gap:16px}}
-@keyframes fadeIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}.prog-card{animation:fadeIn 0.3s ease both}
+  :root {
+    --cream: #f5f2ee;
+    --cream-deep: #ede8e0;
+    --paper: #fbf9f5;
+    --ink: #1a1a1a;
+    --ink-soft: #3a3a3a;
+    --mute: #6b6b6b;
+    --line: #d8d3c8;
+    --line-soft: #e5e0d4;
+    --rust: #c94a1a;
+    --forest: #1f3d2f;
+    --sun: #e8b84a;
+    --live: #6a9b5f;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+  a { color: inherit; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+  /* Top bar */
+  .topbar {
+    border-bottom: 1px solid var(--line);
+    padding: 18px 0;
+  }
+  .topbar-inner {
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  }
+  .brand {
+    font-family: 'Instrument Serif', serif;
+    font-size: 22px; font-style: italic;
+    letter-spacing: -0.01em;
+    text-decoration: none;
+  }
+  .brand-dot {
+    display: inline-block; width: 7px; height: 7px;
+    border-radius: 50%; background: var(--rust);
+    margin-right: 8px; vertical-align: middle;
+  }
+  .topbar-meta {
+    font-family: 'Instrument Serif', serif;
+    font-size: 14px; font-style: italic;
+    color: var(--mute);
+  }
+
+  /* Intro */
+  .intro {
+    padding: 72px 0 48px;
+    position: relative;
+  }
+  .intro-hi {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--rust);
+    margin-bottom: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .intro-hi::before {
+    content: '';
+    display: inline-block;
+    width: 28px;
+    height: 1px;
+    background: var(--rust);
+  }
+  h1 {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(34px, 5vw, 52px);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+    margin-bottom: 22px;
+  }
+  h1 .mark {
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+  }
+  h1 .mark::before {
+    content: '';
+    position: absolute;
+    left: -4px; right: -4px;
+    bottom: 4px;
+    height: 12px;
+    background: var(--sun);
+    opacity: 0.4;
+    z-index: -1;
+    transform: skew(-4deg) rotate(-0.8deg);
+    border-radius: 2px;
+  }
+  .intro p {
+    font-size: 16px;
+    color: var(--ink-soft);
+    line-height: 1.65;
+    max-width: 580px;
+  }
+  .intro p em {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    color: var(--forest);
+  }
+
+  /* Section label */
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    color: var(--mute);
+    text-transform: uppercase;
+    margin-bottom: 18px;
+    padding-top: 28px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-label .count {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    color: var(--rust);
+    font-size: 14px;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+
+  /* Recent update note */
+  .recent-note {
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin-bottom: 18px;
+    padding: 10px 14px;
+    background: #fbf3e3;
+    border: 1px solid #f0e0b8;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .recent-note em {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    color: var(--forest);
+    font-size: 14px;
+  }
+  .recent-star {
+    color: var(--rust);
+    font-size: 14px;
+  }
+  .recent-date {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--mute);
+    margin-left: auto;
+    letter-spacing: 0.03em;
+  }
+
+  /* Provider list */
+  .providers {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 44px;
+  }
+  .provider {
+    background: var(--paper);
+    border: 1px solid var(--line-soft);
+    border-radius: 6px;
+    padding: 24px 26px;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    transition: all 0.15s ease;
+    position: relative;
+  }
+  .provider:hover {
+    border-color: var(--ink);
+    background: #fff;
+    transform: translateY(-1px);
+  }
+  .provider-left { flex: 1; min-width: 0; }
+  .provider-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 6px;
+  }
+  .live-dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--live);
+    position: relative;
+    flex-shrink: 0;
+  }
+  .live-dot::after {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: 50%;
+    background: var(--live);
+    opacity: 0.3;
+    animation: pulse 2.4s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.3; }
+    50% { transform: scale(1.5); opacity: 0; }
+  }
+  .provider-name {
+    font-family: 'Instrument Serif', serif;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+  .provider-pitch {
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+  .provider-pitch em {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    color: var(--forest);
+  }
+  .provider-meta {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--mute);
+    letter-spacing: 0.03em;
+  }
+  .provider-arrow {
+    font-family: 'Instrument Serif', serif;
+    font-size: 24px;
+    color: var(--ink);
+    line-height: 1;
+    flex-shrink: 0;
+    transition: transform 0.15s ease;
+  }
+  .provider:hover .provider-arrow { transform: translateX(4px); }
+
+  .provider.coming {
+    cursor: default;
+    background: transparent;
+    border-style: dashed;
+    opacity: 0.85;
+  }
+  .provider.coming:hover {
+    border-color: var(--line);
+    background: transparent;
+    transform: none;
+  }
+  .provider.coming .provider-arrow { display: none; }
+  .provider.coming .provider-name { color: var(--mute); }
+  .soon-dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    border: 1.5px dashed var(--mute);
+    flex-shrink: 0;
+  }
+
+  /* Help */
+  .help {
+    padding: 28px 24px;
+    background: var(--paper);
+    border: 1px solid var(--line-soft);
+    border-radius: 6px;
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .help-icon {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    color: var(--rust);
+    font-size: 20px;
+    line-height: 1;
+    margin-top: 3px;
+    flex-shrink: 0;
+  }
+  .help a {
+    color: var(--rust);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid var(--rust);
+  }
+  .help a:hover { background: var(--sun); opacity: 0.7; border-bottom-color: transparent; }
+
+  /* Footer */
+  footer {
+    margin-top: 64px;
+    padding: 24px 0 32px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .foot-left {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 15px;
+    color: var(--ink-soft);
+  }
+  .foot-right {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--mute);
+    letter-spacing: 0.03em;
+  }
+  .foot-right a { color: var(--mute); text-decoration: none; }
+  .foot-right a:hover { color: var(--rust); }
+
+  @media (max-width: 600px) {
+    .intro { padding: 56px 0 36px; }
+    .provider { flex-direction: column; align-items: flex-start; gap: 14px; padding: 22px; }
+    .provider-arrow { align-self: flex-end; }
+    footer { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .help { padding: 22px; }
+  }
 </style>
 </head>
 <body>
 
-<nav>
-  <div class="nav-brand">
-    <div class="nav-logo">Learners<span>Lab</span></div>
-    <span class="nav-partner">× VASCSC Summer 2026</span>
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a href="/" class="brand"><span class="brand-dot"></span>Learners Lab</a>
+    <div class="topbar-meta">for our parent communities</div>
   </div>
-  <div class="nav-helpline">Helpline: <strong>94284 05407</strong></div>
-</nav>
+</header>
 
-<div class="hero">
-  <div class="hero-badge">📅 21 April – 6 June 2026 · Registrations Open</div>
-  <h1>Find the Right Science<br>Program for <em>Your Child</em></h1>
-  <p class="hero-sub">50+ hands-on STEM workshops at VASCSC, Ahmedabad. Pick your child's standard and interest — we'll show exactly what fits.</p>
-  <div class="hero-pills">
-    <span class="hero-pill">🔭 Astronomy</span>
-    <span class="hero-pill">🤖 Robotics</span>
-    <span class="hero-pill">⚗️ Chemistry</span>
-    <span class="hero-pill">🚀 Rocketry</span>
-    <span class="hero-pill">🧬 Biology</span>
-    <span class="hero-pill">💻 Coding</span>
+<section class="intro wrap">
+  <div class="intro-hi">hi parents</div>
+  <h1>The good stuff for your kid, all in <span class="mark">one place.</span></h1>
+  <p>
+    Because scrolling WhatsApp forwards isn't really a way to find your child's next thing. This is a small, growing list of places <em>worth knowing about</em> — tap any to see their full calendar and filter by your kid's age.
+  </p>
+</section>
+
+<section class="wrap">
+  <div class="section-label">
+    Listed right now
+    <span class="count">three, growing slowly</span>
   </div>
-</div>
 
-<div style="max-width:800px;margin:0 auto;padding:0 12px;">
-  <div class="finder">
-    <div class="finder-title">Tell us about your child <span>→</span></div>
-    <div class="std-label">Which standard are they going into after summer?</div>
-    <div class="std-grid">
-      <button class="std-btn" onclick="selectStd('1-2',this)">Std 1–2<small>Age 6–7</small></button>
-      <button class="std-btn" onclick="selectStd('3-4',this)">Std 3–4<small>Age 8–9</small></button>
-      <button class="std-btn" onclick="selectStd('5-6',this)">Std 5–6<small>Age 10–11</small></button>
-      <button class="std-btn" onclick="selectStd('7-8',this)">Std 7–8<small>Age 12–13</small></button>
-      <button class="std-btn" onclick="selectStd('9-12',this)">Std 9–12<small>Age 14+</small></button>
-    </div>
-    <div class="interest-label">What are they curious about? (pick any)</div>
-    <div class="interest-chips">
-      <span class="chip" onclick="toggleChip(this,'astronomy')">🔭 Astronomy</span>
-      <span class="chip" onclick="toggleChip(this,'biology')">🧬 Biology</span>
-      <span class="chip" onclick="toggleChip(this,'chemistry')">⚗️ Chemistry</span>
-      <span class="chip" onclick="toggleChip(this,'emerging')">💻 Coding & Tech</span>
-      <span class="chip" onclick="toggleChip(this,'mathematics')">📐 Maths</span>
-      <span class="chip" onclick="toggleChip(this,'rocketry')">🚀 Rockets & Making</span>
-      <span class="chip" onclick="toggleChip(this,'physics')">⚡ Physics</span>
-      <span class="chip" onclick="toggleChip(this,'fun')">🎨 Art & Science</span>
-    </div>
-    <div class="finder-cta">
-      <button class="btn-find" onclick="applyFilter()">Show Programs</button>
-      <span class="finder-hint">Admission is first-come, first-served — limited seats</span>
+  <div class="recent-note">
+    <span class="recent-star">✻</span>
+    <em>just added:</em> Mesa — Future Founders Summer School <span class="recent-date">18 apr</span>
+  </div>
+
+  <div class="providers">
+    <a href="/vascsc" class="provider">
+      <div class="provider-left">
+        <div class="provider-head">
+          <span class="live-dot"></span>
+          <span class="provider-name">VASCSC</span>
+        </div>
+        <div class="provider-pitch">Science experiments, weekend workshops, summer camps. For the <em>"but why?"</em> kid.</div>
+        <div class="provider-meta">Std 1–12 · Ahmedabad · for parents in/around the city</div>
+      </div>
+      <span class="provider-arrow">→</span>
+    </a>
+
+    <a href="/inme" class="provider">
+      <div class="provider-left">
+        <div class="provider-head">
+          <span class="live-dot"></span>
+          <span class="provider-name">INME</span>
+        </div>
+        <div class="provider-pitch">Trekking, rafting, snow camps across India. <em>Kids come back different.</em></div>
+        <div class="provider-meta">Ages 9–17 · departures from Mumbai, Pune, Delhi, Bangalore</div>
+      </div>
+      <span class="provider-arrow">→</span>
+    </a>
+
+    <a href="/mesa" class="provider">
+      <div class="provider-left">
+        <div class="provider-head">
+          <span class="live-dot"></span>
+          <span class="provider-name">Mesa</span>
+        </div>
+        <div class="provider-pitch">A 2-week summer school where teens build real businesses. <em>Not slides. Actual revenue.</em></div>
+        <div class="provider-meta">Grades 9–12 · Bangalore · 2-week summer intensive</div>
+      </div>
+      <span class="provider-arrow">→</span>
+    </a>
+
+    <div class="provider coming">
+      <div class="provider-left">
+        <div class="provider-head">
+          <span class="soon-dot"></span>
+          <span class="provider-name">More coming</span>
+        </div>
+        <div class="provider-pitch">We're adding only what we'd actually recommend — so the list grows slowly, on purpose.</div>
+      </div>
     </div>
   </div>
-</div>
 
-<div class="info-strip" style="margin-top:32px;">
-  <div class="info-item"><span class="icon">📍</span><span>VASCSC, Navrangpura, <strong>Ahmedabad</strong></span></div>
-  <div class="info-item"><span class="icon">🕐</span><span>Tue–Sat <strong>10am–12:30pm</strong> & <strong>2:30–5pm</strong></span></div>
-  <div class="info-item"><span class="icon">💳</span><span>Pay at centre — <strong>Cash / Card / UPI</strong></span></div>
-  <div class="info-item"><span class="icon">📞</span><span>Helpline <strong>94284 05407</strong></span></div>
-</div>
-
-<div class="results-section" id="resultsSection">
-  <div class="results-header">
+  <div class="help">
+    <span class="help-icon">✻</span>
     <div>
-      <div class="results-count"><span id="countNum">50+</span> Programs</div>
-      <div class="results-meta" id="resultsMeta">Showing all programs · Select standard and interest above to filter</div>
+      More centres being added as we find ones worth listing. Only the ones we'd actually recommend to our own kids.
     </div>
-    <button class="clear-btn" onclick="clearFilter()" id="clearBtn" style="display:none;">Clear filter</button>
   </div>
-  <div class="program-grid" id="programGrid"></div>
-</div>
+</section>
 
-<footer>
-  <div class="footer-logo">Learners<span>Lab</span></div>
-  <p style="margin-top:10px;">Programs by <strong style="color:rgba(255,255,255,0.85)">Vikram A Sarabhai Community Science Centre</strong><br>Navrangpura, Ahmedabad 380 009 · <a href="tel:+917926302914">+91-79-26302914</a> · <a href="mailto:vascsc@gmail.com">vascsc@gmail.com</a></p>
-  <p style="margin-top:8px;font-size:12px;">GST applicable on all fees · Fees non-refundable · Admission on first-come-first-served basis</p>
-  <div class="footer-powered">Powered by <a href="https://www.thelearnerslab.in" target="_blank">thelearnerslab.in</a></div>
-  <p style="margin-top:20px;font-size:11px;color:rgba(255,255,255,0.25);max-width:600px;margin-left:auto;margin-right:auto;line-height:1.6;">This page is for information purposes only. Program details are sourced from the official VASCSC Summer Programme 2026 brochure. For admissions and payment, please visit VASCSC directly. Learners Lab is not affiliated with VASCSC.</p>
+<footer class="wrap">
+  <div class="foot-left">Made by a parent, for our communities.</div>
+  <div class="foot-right">Learners Lab · Built with <a href="https://iviewlabs.com" target="_blank" rel="noopener">iView Labs</a></div>
 </footer>
 
-<div class="overlay" id="overlay" onclick="closeIfOutside(event)">
-  <div class="modal" id="modal">
-    <div class="modal-top">
-      <div>
-        <div class="modal-prog-name" id="mName">Program Name</div>
-        <div class="modal-prog-meta" id="mMeta">—</div>
-      </div>
-      <button class="modal-close" onclick="closeModal()">✕</button>
-    </div>
-    <div class="modal-body" id="formView">
-      <div class="form-row">
-        <div class="form-group wide"><label>Child's Full Name</label><input type="text" id="fName" placeholder="As per school records"></div>
-        <div class="form-group"><label>Standard (going into)</label><select id="fStd"><option value="">Select</option><option>Std 1</option><option>Std 2</option><option>Std 3</option><option>Std 4</option><option>Std 5</option><option>Std 6</option><option>Std 7</option><option>Std 8</option><option>Std 9</option><option>Std 10</option><option>Std 11</option><option>Std 12</option></select></div>
-        <div class="form-group"><label>Age</label><input type="number" id="fAge" placeholder="Years" min="4" max="18"></div>
-        <div class="form-group"><label>School Name</label><input type="text" id="fSchool" placeholder="School name"></div>
-        <div class="form-group"><label>Preferred Batch</label><select id="fBatch"></select></div>
-        <div class="form-group wide"><label>Parent / Guardian Name</label><input type="text" id="fParent" placeholder="Full name"></div>
-        <div class="form-group"><label>Phone Number</label><input type="tel" id="fPhone" placeholder="+91 00000 00000"></div>
-        <div class="form-group"><label>Email Address</label><input type="email" id="fEmail" placeholder="you@email.com"></div>
-      </div>
-      <p class="consent">By submitting, I confirm my child will follow all VASCSC instructions. I understand fees are non-refundable once paid at the centre. This form registers your interest — please visit VASCSC to complete admission and payment.</p>
-      <button class="btn-submit" onclick="submitForm()">Register Interest →</button>
-    </div>
-    <div class="success" id="successView">
-      <div class="success-emoji">🎉</div>
-      <div class="success-title">You're registered!</div>
-      <p class="success-body">Visit VASCSC to complete your admission and payment.</p>
-      <div class="success-card"><strong>📍 Where to go</strong><br>VASCSC, Navrangpura, Ahmedabad 380 009<br><br><strong>🕐 Registration hours</strong><br>Tue–Sat: 10am–12:30pm & 2:30–5pm<br>Sunday: 10am–12:30pm · Closed Mondays<br><br><strong>📋 Bring along</strong><br>Photo ID + passport-size photograph of child<br><br><strong>📞 Questions?</strong><br>Call 94284 05407</div>
-      <button class="btn-back" onclick="closeModal()">← Back to Programs</button>
-    </div>
-  </div>
-</div>
-
-<script>
-const PROGRAMS=[{id:'as1',cat:'astronomy',catLabel:'Astronomy',title:'Digital Space Pioneers',levels:['1-2','3-4'],time:'9:30–11:00 am',fee:1350,seats:15,desc:'Explore the solar system through hands-on activities, build space models, and learn how scientists measure vast cosmic distances.',batches:['21–25 Apr','28 Apr–2 May','5–9 May','12–16 May','19–23 May','26–30 May'],skills:['Observation','Systems thinking']},{id:'as2',cat:'astronomy',catLabel:'Astronomy',title:'Space Explorers',levels:['3-4','5-6'],time:'11:30 am–1:00 pm',fee:1500,seats:15,desc:'Create eclipse boxes, satellite models, and constellation charts. Explore eclipses, the solar system, and night sky objects.',batches:['21–25 Apr','28 Apr–2 May','12–16 May','26–30 May','2–6 Jun'],skills:['Making','Observation','Experimentation']},{id:'as3',cat:'astronomy',catLabel:'Astronomy',title:'Cosmic Cadets',levels:['5-6','7-8'],time:'4:00–5:30 pm',fee:1800,seats:18,desc:'Explore the Moon, Sun, constellations, and satellites. Includes a special Astronight for live sky observation.',batches:['21–25 Apr','12–16 May','19–23 May'],skills:['Observation','Systems thinking']},{id:'as4',cat:'astronomy',catLabel:'Astronomy',title:'Telescope Handling & Making',levels:['7-8','9-12'],time:'2:00–3:30 pm',fee:1800,seats:18,desc:'Build your own telescope and planisphere, then use them on a dedicated Astronight. Includes Bortle scale activities.',batches:['26–30 May'],skills:['Making','Observation','Experimentation']},{id:'as5',cat:'astronomy',catLabel:'Astronomy',title:'Asteroid Hunters',levels:['9-12'],time:'2:00–3:30 pm',fee:1500,seats:18,desc:'Analyse real asteroid datasets using Astrometrica and participate in an actual international asteroid search campaign.',batches:['5–9 May'],skills:['Data thinking','Experimentation']},{id:'as6',cat:'astronomy',catLabel:'Astronomy',title:'Astropython',levels:['9-12'],time:'2:00–3:30 pm',fee:1500,seats:18,desc:'Use Python to analyse real data from space observatories. Create graphs to visualise what the universe looks like in data.',batches:['19–23 May'],skills:['Coding','Data thinking']},{id:'bo1',cat:'biology',catLabel:'Biology',title:'Little Biologist',levels:['1-2','3-4'],time:'Various timings',fee:1350,seats:20,desc:"Microscopes, food and nutrition, seed-to-plant journey, phototropism, and exploring what's inside the human body.",batches:['21–25 Apr','28 Apr–2 May','5–9 May','12–16 May','19–23 May','26–30 May','2–6 Jun'],skills:['Observation','Experimentation']},{id:'bo2',cat:'biology',catLabel:'Biology',title:'Biology Exploration',levels:['3-4','5-6'],time:'9:30–11:00 am',fee:1350,seats:20,desc:'Decode packaged food, make plant-based plastic, explore saprophytes, understand hydroponics and ocean acidification.',batches:['28 Apr–2 May','5–9 May','12–16 May','26–30 May','2–6 Jun'],skills:['Observation','Systems thinking','Experimentation']},{id:'bo3',cat:'biology',catLabel:'Biology',title:'Microscopic Exploration',levels:['5-6','7-8'],time:'4:00–5:30 pm',fee:1350,seats:20,desc:'Examine building blocks of life, plant reproductive structures, and the microbial population of everyday objects like curd.',batches:['21–25 Apr','19–23 May','2–6 Jun'],skills:['Observation','Experimentation']},{id:'bo4',cat:'biology',catLabel:'Biology',title:'Biology Investigation',levels:['7-8','9-12'],time:'9:30–11:00 am',fee:1350,seats:20,desc:'Haematology, the effect of disinfectants on microorganisms, preservatives on shelf life, and estimating energy in food.',batches:['19–23 May'],skills:['Experimentation','Data thinking','Observation']},{id:'ch1',cat:'chemistry',catLabel:'Chemistry',title:'Little Lab Coats',levels:['1-2'],time:'10:00 am–12:30 pm',fee:500,seats:25,desc:'The gentlest intro to the lab — genie in a bottle, hydrogen rockets, giant bubbles, and the mysterious oobleck.',batches:['3 May','17 May','31 May'],skills:['Observation','Experimentation']},{id:'ch2',cat:'chemistry',catLabel:'Chemistry',title:'Chem 4 Kids',levels:['3-4','5-6'],time:'9:30–11:00 am',fee:1250,seats:20,desc:'Elephant toothpaste, burning ice, slime, chemical filtration, oil painting, and more — intro to the exciting world of chemistry.',batches:['21–25 Apr','28 Apr–2 May','5–9 May','12–16 May','19–23 May','26–30 May','2–6 Jun'],skills:['Experimentation','Observation']},{id:'ch3',cat:'chemistry',catLabel:'Chemistry',title:'Fun with Chemistry',levels:['5-6','7-8'],time:'11:30 am–1:00 pm',fee:1250,seats:20,desc:'Make fireproof cloth, burning bubbles, dust explosions, shape memory alloy, and turn water into liquid gold.',batches:['21–25 Apr','28 Apr–2 May','5–9 May','12–16 May','19–23 May','26–30 May'],skills:['Experimentation','Systems thinking']},{id:'ch4',cat:'chemistry',catLabel:'Chemistry',title:'Chemistry Canvas',levels:['5-6','7-8'],time:'3:00–5:00 pm',fee:800,seats:20,desc:'Epoxy resin art, cyanotype (blue impression) printing, and garden of chemical wonders — where art meets chemistry.',batches:['6–7 May','20–21 May'],skills:['Design','Making','Experimentation']},{id:'ch5',cat:'chemistry',catLabel:'Chemistry',title:'Molecule Makers',levels:['5-6','7-8'],time:'2:00–4:00 pm',fee:800,seats:20,desc:'Build chemical reaction models, spell words with elements, and explore the cool side of nitrogen chemistry.',batches:['3–4 Jun'],skills:['Making','Systems thinking']},{id:'et1',cat:'emerging',catLabel:'Emerging Tech',title:'Coding for Kids',levels:['3-4','5-6'],time:'9:30–11:00 am',fee:1250,seats:20,desc:'Block-based coding with Scratch — build games, animations, and stories. Plus geometric art with Turtle Art.',batches:['21–25 Apr','19–23 May'],skills:['Coding','Design']},{id:'et2',cat:'emerging',catLabel:'Emerging Tech',title:'TechnoFun',levels:['3-4','5-6'],time:'Various timings',fee:1800,seats:20,desc:'Build circuits, RGB piano, 3D holograms, solar spin art machines, and explore Augmented and Virtual Reality.',batches:['21–25 Apr','5–9 May','12–16 May'],skills:['Making','Design','Systems thinking']},{id:'et3',cat:'emerging',catLabel:'Emerging Tech',title:'Little Learners: AI & ML',levels:['3-4','5-6'],time:'9:30–11:00 am',fee:1500,seats:20,desc:'Understand AI and Machine Learning through hands-on activities with sound, pictures, and 3D objects using Python.',batches:['28 Apr–2 May','26–30 May'],skills:['Coding','Data thinking','Systems thinking']},{id:'et4',cat:'emerging',catLabel:'Emerging Tech',title:'Build a Bot – Juniors',levels:['5-6','7-8'],time:'Various timings',fee:3000,seats:18,desc:'Design, build, and program your own robot using easy-to-assemble components and coding fundamentals.',batches:['21–25 Apr','28 Apr–2 May','26–30 May'],skills:['Making','Coding','Design']},{id:'et5',cat:'emerging',catLabel:'Emerging Tech',title:'Digital Fabrication',levels:['5-6','7-8'],time:'Various timings',fee:2000,seats:20,desc:'Learn laser cutting and 3D printing. Design and create your own models. Includes a visit to a real FabLab.',batches:['21–25 Apr','19–23 May'],skills:['Making','Design']},{id:'et6',cat:'emerging',catLabel:'Emerging Tech',title:'Robotics Juniors',levels:['7-8'],time:'10:00 am–1:00 pm',fee:5700,seats:20,desc:'Build a Robotic Car using Micro:bit — combining coding, electronics, and robotics in one complete project.',batches:['5–9 May','2–6 Jun'],skills:['Making','Coding','Systems thinking']},{id:'et7',cat:'emerging',catLabel:'Emerging Tech',title:'Android App Development',levels:['7-8','9-12'],time:'4:00–5:30 pm',fee:1250,seats:20,desc:'Build your first Android app from scratch. No programming experience needed. Strong fundamentals guaranteed.',batches:['5–9 May'],skills:['Coding','Design']},{id:'et8',cat:'emerging',catLabel:'Emerging Tech',title:'Gesture Tech: AI & ML with Python',levels:['7-8','9-12'],time:'9:30–11:00 am',fee:2500,seats:20,desc:'Build AI models using Python, explore gesture recognition, sound algorithms, and ML techniques. Bring your laptop.',batches:['5–9 May','19–23 May'],skills:['Coding','Data thinking','Systems thinking']},{id:'et9',cat:'emerging',catLabel:'Emerging Tech',title:'Robotics Seniors',levels:['9-12'],time:'3:30–5:30 pm',fee:4800,seats:20,desc:'Design and control your own robotic car with sensor modules and a smartphone app for wireless control.',batches:['28 Apr–2 May','26–30 May'],skills:['Making','Coding','Systems thinking']},{id:'et10',cat:'emerging',catLabel:'Emerging Tech',title:'Build a Bot – Seniors',levels:['9-12'],time:'3:30–5:30 pm',fee:5500,seats:15,desc:'Sensors, motors, and microcontrollers — learn to build and program interactive robotic systems from scratch.',batches:['2–6 Jun'],skills:['Making','Coding','Experimentation']},{id:'et11',cat:'emerging',catLabel:'Emerging Tech',title:'STEM Studio 3.0',levels:['9-12'],time:'10:00 am–5:00 pm',fee:6750,seats:25,desc:'Full-day bootcamp with CEPT University — 3D printing, Arduino, AI, Design Thinking, field visit, and entrepreneurship.',batches:['11–15 May'],skills:['Design','Systems thinking','Making']},{id:'et12',cat:'emerging',catLabel:'Emerging Tech',title:'Solar Innovators',levels:['9-12'],time:'10:00 am–1:00 pm',fee:1100,seats:20,desc:'Build solar prototypes, understand how sunlight becomes energy. Develop teamwork and sustainable problem-solving.',batches:['17 May'],skills:['Making','Experimentation','Systems thinking']},{id:'et13',cat:'emerging',catLabel:'Emerging Tech',title:'NOT Drones: Build. Code. Fly',levels:['9-12'],time:'Various timings',fee:6000,seats:20,desc:'Drone electronics, GPS systems, flight controllers — then assemble, calibrate, simulate, and race your own drone.',batches:['12–16 May (9:30–11am)','12–16 May (11:30am–1pm)'],skills:['Making','Coding','Systems thinking']},{id:'ma1',cat:'mathematics',catLabel:'Mathematics',title:'Maths Hands-on Junior',levels:['3-4'],time:'11:30 am–1:00 pm',fee:1350,seats:20,desc:'Create game models, optical illusions, puzzles, pop-up cards using symmetry, and discover maths in the garden.',batches:['5–9 May','12–16 May','19–23 May','26–30 May','2–6 Jun'],skills:['Observation','Design']},{id:'ma2',cat:'mathematics',catLabel:'Mathematics',title:'Maths Hands-on Senior',levels:['5-6'],time:'4:00–5:30 pm',fee:1350,seats:20,desc:'Create symmetry patterns, build flexible 3D shapes, explore labyrinth networks, and see maths in fabric production.',batches:['5–9 May','12–16 May','19–23 May','26–30 May'],skills:['Systems thinking','Design','Making']},{id:'ma3',cat:'mathematics',catLabel:'Mathematics',title:'Maths is Fun',levels:['7-8'],time:'9:30–11:00 am',fee:1350,seats:20,desc:'Topological puzzles, optical illusions, tumbling blocks, Lissajous curves, and architecture-inspired structures.',batches:['28 Apr–2 May','5–9 May','12–16 May'],skills:['Systems thinking','Observation']},{id:'ma4',cat:'mathematics',catLabel:'Mathematics',title:'Vedic Maths – Junior',levels:['5-6','7-8'],time:'9:30–11:00 am',fee:1250,seats:20,desc:'Speed and accuracy sutras for addition, subtraction, multiplication, LCM-HCF and percentages. Measurably faster calculations.',batches:['26–30 May','2–6 Jun'],skills:['Data thinking']},{id:'ma5',cat:'mathematics',catLabel:'Mathematics',title:'Vedic Maths – Senior',levels:['9-12'],time:'4:00–5:30 pm',fee:2200,seats:20,desc:'Advanced techniques for squares, square roots, cubes, cube roots, quadratic and cubic equations.',batches:['21–25 Apr & 28 Apr–2 May'],skills:['Data thinking','Systems thinking']},{id:'mr1',cat:'rocketry',catLabel:'Model Rocketry',title:'Aeromodelling Junior',levels:['3-4','5-6'],time:'Various timings',fee:1350,seats:20,desc:'Learn principles of flight, build water-propelled rockets, paper and plastic gliders, and test them on a launching mechanism.',batches:['21–25 Apr','26–30 May'],skills:['Making','Experimentation']},{id:'mr2',cat:'rocketry',catLabel:'Model Rocketry',title:'Aeromodelling Senior',levels:['5-6','7-8'],time:'4:00–5:30 pm',fee:1800,seats:20,desc:'Explore aerodynamics and aviation fundamentals, build gliders from paper, corrugated sheets, and balsa wood. Test in a wind tunnel.',batches:['21–25 Apr','28 Apr–2 May'],skills:['Making','Experimentation','Systems thinking']},{id:'mr3',cat:'rocketry',catLabel:'Model Rocketry',title:'Solid Propellant Rockets',levels:['5-6','7-8'],time:'9:30–11:00 am',fee:1400,seats:20,desc:'Prepare solid rocket fuels from scratch, build model rocket engine motors, and launch them.',batches:['28 Apr–2 May','5–9 May'],skills:['Experimentation','Making','Systems thinking']},{id:'mr4',cat:'rocketry',catLabel:'Model Rocketry',title:'Water Booster Rockets',levels:['5-6','7-8'],time:'4:00–5:30 pm',fee:1800,seats:20,desc:'Design and build water rockets, experiment with parachute systems, differential drag, and material variations.',batches:['5–9 May','12–16 May'],skills:['Design','Experimentation','Making']},{id:'mr5',cat:'rocketry',catLabel:'Model Rocketry',title:'Sound & Music',levels:['5-6','7-8'],time:'9:30–11:00 am',fee:1800,seats:20,desc:'Make instruments, code music, create sound from electronic circuits. Explore sound as a wave from a science perspective.',batches:['12–16 May','19–23 May'],skills:['Making','Coding','Systems thinking']},{id:'mr6',cat:'rocketry',catLabel:'Model Rocketry',title:'Kinetic Sculptures',levels:['5-6','7-8'],time:'4:00–5:30 pm',fee:2100,seats:20,desc:'Where geometry meets art — design and build moving sculptures and explore the mathematics behind them.',batches:['26–30 May'],skills:['Design','Making','Systems thinking']},{id:'ph1',cat:'physics',catLabel:'Physics',title:'Physics Ninjas',levels:['3-4'],time:'4:00–5:30 pm',fee:1350,seats:20,desc:'Light, colour, static electricity, balance, and simple circuits — through Dancing Paper, Water Electric Circuit and more.',batches:['21–25 Apr','28 Apr–2 May','12–16 May','26–30 May'],skills:['Observation','Experimentation']},{id:'ph2',cat:'physics',catLabel:'Physics',title:'Young Physicists',levels:['5-6'],time:'Various timings',fee:1500,seats:20,desc:'Explore magnets, motion, and optics. Build a scribbling robot, cube kaleidoscope, message decoder and more.',batches:['21–25 Apr','5–9 May','19–23 May','2–6 Jun'],skills:['Making','Observation','Experimentation']},{id:'ph3',cat:'physics',catLabel:'Physics',title:'Physics Explorers',levels:['7-8'],time:'4:00–5:30 pm',fee:1800,seats:20,desc:'Build a Tesla coil, magnetic levitation system, and tensegrity structure. Explore refraction, waves, and magnetism.',batches:['5–9 May','19–23 May','2–6 Jun'],skills:['Making','Experimentation','Systems thinking']},{id:'ph4',cat:'physics',catLabel:'Physics',title:'Earth Physics Exploration',levels:['5-6'],time:'9:30–11:00 am',fee:700,seats:20,desc:'Northern lights, tornadoes, earthquakes, and climate change — explore Earth phenomena and build DIY models.',batches:['9–10 May (weekend)'],skills:['Observation','Systems thinking']},{id:'ph5',cat:'physics',catLabel:'Physics',title:'Electronics for You',levels:['5-6'],time:'11:30 am–1:00 pm',fee:1600,seats:15,desc:'Build gadgets, discover electronic components, and learn soldering to assemble working electronic devices.',batches:['28 Apr–2 May','12–16 May','26–30 May'],skills:['Making','Systems thinking']},{id:'sk1',cat:'fun',catLabel:'Fun with Science',title:'Science Kids Zone',levels:['1-2'],time:'Various timings',fee:2400,seats:25,desc:'DIY activities for little hands — food, sound, magnets, human anatomy, optical illusions, shapes, puzzles, and science challenges.',batches:['21–25 Apr','28 Apr–2 May','5–9 May','12–16 May','19–23 May','26–30 May','2–6 Jun'],skills:['Observation','Experimentation']},{id:'cm1',cat:'fun',catLabel:'Fun with Science',title:'Curious Minds',levels:['1-2'],time:'11:30 am–1:00 pm',fee:1350,seats:20,desc:'Jumping frogs, pulley systems, Jastrow illusions, money math challenges, and experiments with light and friction.',batches:['28 Apr–2 May','5–9 May'],skills:['Observation','Experimentation']},{id:'ff1',cat:'fun',catLabel:'Fun with Science',title:'Forensic Files',levels:['5-6'],time:'4:00–5:30 pm',fee:1350,seats:20,desc:'Solve a new case each day using fingerprinting, DNA profiling, graphology, spatter analysis, and forensic search patterns.',batches:['28 Apr–2 May','5–9 May'],skills:['Observation','Data thinking','Systems thinking']},{id:'sc1',cat:'fun',catLabel:'Fun with Science',title:'STEAM Creators',levels:['3-4'],time:'9:30–11:00 am',fee:1800,seats:18,desc:'Surface tension, states of matter, light — explored through Oshibana art, candle making, puppetry, and digital crafts.',batches:['12–16 May'],skills:['Design','Making','Experimentation']},{id:'ss1',cat:'fun',catLabel:'Fun with Science',title:'The STEM Sketchbook',levels:['3-4','5-6'],time:'9:30–11:00 am',fee:1200,seats:20,desc:'Transform a sketchbook into a portable lab. Blend STEM concepts into visual art — think like a scientist, draw like an artist.',batches:['5–8 May'],skills:['Observation','Design','Communication']},{id:'ba1',cat:'fun',catLabel:'Fun with Science',title:'AniMata Builder',levels:['5-6'],time:'9:30–11:00 am',fee:1500,seats:15,desc:'Build moving toys and mechanical automata, exploring animation history and blending art with simple engineering.',batches:['19–22 May'],skills:['Making','Design']},{id:'vk1',cat:'fun',catLabel:'Fun with Science',title:'STEM Summer School',levels:['3-4'],time:'10:00 am–1:30 pm',fee:2800,seats:30,desc:'Off-campus at VIKSAT, Bodakdev. Water cycle, slime, crystals, robotic bugs, and the Supercool Science Show.',batches:['12–16 May'],skills:['Experimentation','Making','Systems thinking']},{id:'vk2',cat:'fun',catLabel:'Fun with Science',title:'STEM Summer Camp',levels:['5-6'],time:'10:00 am–5:00 pm',fee:4200,seats:30,desc:'Full-day off-campus camp at VIKSAT — DNA lab, 3D printed magnets, Rube Goldberg machines, solar astronomy, nature trail.',batches:['20–23 May'],skills:['Experimentation','Systems thinking','Data thinking']}];
-const CAT_COLORS={astronomy:'astronomy',biology:'biology',chemistry:'chemistry',emerging:'emerging',mathematics:'mathematics',rocketry:'rocketry',physics:'physics',fun:'fun'};
-let activeStd=null,activeInterests=new Set();
-function selectStd(s,b){document.querySelectorAll('.std-btn').forEach(x=>x.classList.remove('active'));if(activeStd===s){activeStd=null}else{activeStd=s;b.classList.add('active')}}
-function toggleChip(e,c){if(activeInterests.has(c)){activeInterests.delete(c);e.classList.remove('active')}else{activeInterests.add(c);e.classList.add('active')}}
-function applyFilter(){document.getElementById('resultsSection').scrollIntoView({behavior:'smooth',block:'start'});setTimeout(renderPrograms,300)}
-function clearFilter(){activeStd=null;activeInterests.clear();document.querySelectorAll('.std-btn').forEach(b=>b.classList.remove('active'));document.querySelectorAll('.chip').forEach(c=>c.classList.remove('active'));renderPrograms()}
-function renderPrograms(){const g=document.getElementById('programGrid'),c=document.getElementById('clearBtn'),m=document.getElementById('resultsMeta'),n=document.getElementById('countNum'),f=activeStd||activeInterests.size>0;let r=PROGRAMS;if(activeStd)r=r.filter(p=>p.levels.includes(activeStd));if(activeInterests.size>0)r=r.filter(p=>activeInterests.has(p.cat));c.style.display=f?'block':'none';n.textContent=r.length;if(f){const sl=activeStd?`Std ${activeStd.replace('-','–')}`:'';const il=activeInterests.size>0?[...activeInterests].join(', '):'';m.textContent=[sl,il].filter(Boolean).join(' · ')}else{m.textContent='Showing all programs · Select standard and interest above to filter'}if(r.length===0){g.innerHTML='<div class="empty-state"><div class="emoji">🔍</div><p>No programs found for this combination.<br>Try a different standard or interest.</p></div>';return}g.innerHTML=r.map((p,i)=>{const cat=CAT_COLORS[p.cat];const bd=p.batches.slice(0,3).map(b=>`<span class="batch-chip">${b}</span>`).join('');const mb=p.batches.length>3?`<span class="batch-chip">+${p.batches.length-3} more</span>`:'';const sk=p.skills?p.skills.map(s=>`<span class="skill-tag">${s}</span>`).join(''):'';return`<div class="prog-card" style="animation-delay:${i*0.04}s"><div class="card-color-bar ${cat}-bar"></div><div class="card-inner"><div class="card-top"><span class="cat-tag ${cat}">${p.catLabel}</span><span class="seats-info">🟢 ${p.seats} seats</span></div><div class="card-title">${p.title}</div><div class="card-desc">${p.desc}</div><div class="card-details"><div class="detail"><div class="detail-label">Level</div><div class="detail-value">Std ${p.levels.map(l=>l.replace('-','–')).join(', ')}</div></div><div class="detail"><div class="detail-label">Timing</div><div class="detail-value">${p.time}</div></div></div>${sk?`<div class="skill-tags">${sk}</div>`:''}<div class="card-batches">${bd}${mb}</div></div><div class="card-footer"><div class="card-fee">₹${p.fee.toLocaleString('en-IN')}<small> + GST</small></div><button class="btn-enroll" onclick="openModal('${p.id}')">Register →</button></div></div>`}).join('')}
-let currentProg=null;
-function openModal(id){currentProg=PROGRAMS.find(p=>p.id===id);if(!currentProg)return;document.getElementById('mName').textContent=currentProg.title;document.getElementById('mMeta').textContent=`${currentProg.catLabel} · Std ${currentProg.levels.map(l=>l.replace('-','–')).join('/')} · ${currentProg.time} · ₹${currentProg.fee.toLocaleString('en-IN')} + GST`;document.getElementById('fBatch').innerHTML=currentProg.batches.map(b=>`<option>${b}</option>`).join('');document.getElementById('formView').style.display='block';document.getElementById('successView').style.display='none';document.getElementById('overlay').classList.add('open');document.body.style.overflow='hidden'}
-function closeModal(){document.getElementById('overlay').classList.remove('open');document.body.style.overflow=''}
-function closeIfOutside(e){if(e.target===document.getElementById('overlay'))closeModal()}
-async function submitForm(){const name=document.getElementById('fName').value.trim();const phone=document.getElementById('fPhone').value.trim();const parent=document.getElementById('fParent').value.trim();if(!name||!phone||!parent){alert("Please fill in child's name, parent name, and phone number.");return}
-const SB_URL='https://srwcjxeiiqqhrbbdjlbh.supabase.co';const SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNyd2NqeGVpaXFxaHJiYmRqbGJoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDI5OTYzNzIsImV4cCI6MjA1ODU3MjM3Mn0.LkelGMfhm9GJNAG_DZmfvyMUxIQZbJuZiI2A2TLybfA';
-const ageVal=document.getElementById('fAge').value;const payload={program:currentProg.title,category:currentProg.catLabel,batch:document.getElementById('fBatch').value,child_name:name,child_standard:document.getElementById('fStd').value||null,child_age:ageVal?parseInt(ageVal):null,school:document.getElementById('fSchool').value||null,parent_name:parent,phone:phone,email:document.getElementById('fEmail').value||null};
-try{const res=await fetch(SB_URL+'/rest/v1/program_registrations',{method:'POST',headers:{'Content-Type':'application/json','apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY},body:JSON.stringify(payload)});if(res.ok||res.status===201)showSuccess();else{console.error('Save failed:',await res.text());alert('Something went wrong. Please try again or call 94284 05407.')}}catch(e){console.error(e);alert('Network error. Please try again or call 94284 05407.')}}
-function showSuccess(){document.getElementById('formView').style.display='none';document.getElementById('successView').style.display='block'}
-renderPrograms();
-</script>
 </body>
 </html>
