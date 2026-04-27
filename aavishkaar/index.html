@@ -19,6 +19,7 @@
     --line: #d8d2c7;
     --accent: #2d5a3f;     /* deep forest — mountain camp */
     --accent-2: #c2410c;   /* warm clay — for one CTA accent */
+    --sun: #e8b84a;        /* sun yellow for the underline highlight */
     --card: #ffffff;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -90,6 +91,23 @@
     margin-bottom: 24px;
   }
   h1 em { font-style: italic; color: var(--accent); }
+  h1 .mark {
+    position: relative;
+    display: inline-block;
+    font-style: italic;
+  }
+  h1 .mark::before {
+    content: '';
+    position: absolute;
+    left: -4px; right: -4px;
+    bottom: 6px;
+    height: 14px;
+    background: var(--sun);
+    opacity: 0.42;
+    z-index: -1;
+    transform: skew(-3deg) rotate(-0.6deg);
+    border-radius: 2px;
+  }
   .lede {
     font-size: 19px;
     color: var(--ink-2);
@@ -376,9 +394,9 @@
     <span class="sep">/</span>
     <span>aavishkaar</span>
   </div>
-  <h1>Five days of <em>Math &amp; Science</em>, in the Dhauladhars, with your child.</h1>
+  <h1>Math &amp; <em>science</em>. In the hills. <span class="mark">With your kid.</span></h1>
   <p class="lede">
-    A parent–child STEM camp at Aavishkaar's campus in Palampur. You and your 9–12 year old explore Math and Science together — through nature, hands-on activities, and the kind of slow attention a hill town gives you.
+    Five days at Aavishkaar's Palampur campus — and you go too. It's a parent–child camp, not a drop-off. You and your 9–12 year old explore math and science together, through nature-linked activities, in the kind of slow attention a hill town gives you.
   </p>
 </section>
 
@@ -423,13 +441,13 @@
   <h2 class="block-title">About this camp</h2>
   <div class="block-prose">
     <p>
-      Aavishkaar runs this as a family camp — children and parents make discoveries together, instead of the usual drop-off-and-pick-up model. You're not watching from the sidelines; you're learning alongside.
+      The thing that makes this different: <strong>you go too</strong>. Aavishkaar runs it as a family camp — kids and parents make discoveries together, instead of the usual drop-off-and-pick-up. You're not watching from the sidelines; you're learning alongside.
     </p>
     <p>
-      Five mornings, 8 AM to 1 PM. Breakfast and lunch are part of the day. The activities are hands-on Math and Science — some indoors, some out in the foothills of the Dhauladhars. It's structured but unhurried.
+      Five mornings, 8 AM to 1 PM. Breakfast and lunch are part of the day. The activities are hands-on math and science — some indoors, some out in the foothills of the Dhauladhars. Structured but unhurried.
     </p>
     <p>
-      The campus itself is quiet. Trees, hills, no rush. That's part of the design — the slowing down is the point.
+      The campus itself is quiet. Trees, hills, no rush. That slowing down is part of the design — it's the point.
     </p>
   </div>
 </section>
@@ -468,7 +486,7 @@
       <div class="headsup">
         <div class="headsup-title">heads up</div>
         <div class="headsup-body">
-          This is a parent–child camp, not a drop-off. At least one parent attends every session with the child. Plan your trip and stay around the full 5 days.
+          This is a parent–child camp, not a drop-off. At least one parent attends every session with the kid. Plan your trip and stay around the full 5 days.
         </div>
       </div>
     </div>
