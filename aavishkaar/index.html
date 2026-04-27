@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Aavishkaar Parent–Child STEM Camp · Palampur · June 2026 · Learners Lab</title>
+<meta name="description" content="A 5-day parent–child Math & Science camp in the Dhauladhars, June 8–12 2026. Curated by Learners Lab." />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --cream: #f5f2ee;
+    --cream-2: #ede8e0;
+    --ink: #1a1a1a;
+    --ink-2: #4a4a4a;
+    --ink-3: #7a7a7a;
+    --line: #d8d2c7;
+    --accent: #2d5a3f;     /* deep forest — mountain camp */
+    --accent-2: #c2410c;   /* warm clay — for one CTA accent */
+    --card: #ffffff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+
+  /* topbar */
+  .topbar {
+    border-bottom: 1px solid var(--line);
+    background: var(--cream);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(8px);
+    background: rgba(245, 242, 238, 0.92);
+  }
+  .topbar-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 14px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+  }
+  .brand {
+    font-family: 'Instrument Serif', serif;
+    font-size: 22px;
+    letter-spacing: -0.01em;
+  }
+  .brand em { font-style: italic; color: var(--ink-2); }
+  .meta {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-3);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  /* hero */
+  .hero {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 64px 24px 32px;
+  }
+  .crumbs {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-3);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+  }
+  .crumbs a:hover { color: var(--ink); }
+  .crumbs .sep { margin: 0 8px; }
+  h1 {
+    font-family: 'Instrument Serif', serif;
+    font-weight: 400;
+    font-size: clamp(40px, 6vw, 72px);
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+  }
+  h1 em { font-style: italic; color: var(--accent); }
+  .lede {
+    font-size: 19px;
+    color: var(--ink-2);
+    max-width: 640px;
+    line-height: 1.5;
+  }
+
+  /* fact strip */
+  .facts {
+    max-width: 1100px;
+    margin: 40px auto 0;
+    padding: 0 24px;
+  }
+  .facts-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border: 1px solid var(--line);
+    background: var(--card);
+    border-radius: 4px;
+  }
+  .fact {
+    padding: 22px 22px;
+    border-right: 1px solid var(--line);
+  }
+  .fact:last-child { border-right: none; }
+  .fact-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--ink-3);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .fact-value {
+    font-family: 'Instrument Serif', serif;
+    font-size: 22px;
+    line-height: 1.15;
+  }
+  .fact-sub {
+    font-size: 12px;
+    color: var(--ink-3);
+    margin-top: 4px;
+  }
+  @media (max-width: 720px) {
+    .facts-grid { grid-template-columns: repeat(2, 1fr); }
+    .fact { border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .fact:nth-child(2n) { border-right: none; }
+    .fact:nth-last-child(-n+2) { border-bottom: none; }
+  }
+
+  /* tags */
+  .tags {
+    max-width: 1100px;
+    margin: 28px auto 0;
+    padding: 0 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    padding: 6px 12px;
+    border: 1px solid var(--line);
+    border-radius: 100px;
+    color: var(--ink-2);
+    background: var(--cream-2);
+  }
+  .tag.primary {
+    background: var(--accent);
+    color: var(--cream);
+    border-color: var(--accent);
+  }
+
+  /* section */
+  section.block {
+    max-width: 1100px;
+    margin: 64px auto 0;
+    padding: 0 24px;
+  }
+  .block-title {
+    font-family: 'Instrument Serif', serif;
+    font-size: 32px;
+    line-height: 1.1;
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+  }
+  .block-prose {
+    font-size: 17px;
+    color: var(--ink-2);
+    max-width: 680px;
+    line-height: 1.6;
+  }
+  .block-prose p + p { margin-top: 14px; }
+
+  /* two col */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+  @media (max-width: 760px) {
+    .two-col { grid-template-columns: 1fr; gap: 32px; }
+  }
+
+  /* pricing card */
+  .pricing-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 28px;
+  }
+  .price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 14px 0;
+    border-bottom: 1px dashed var(--line);
+  }
+  .price-row:last-of-type { border-bottom: none; }
+  .price-label { font-size: 14px; color: var(--ink-2); }
+  .price-amt {
+    font-family: 'Instrument Serif', serif;
+    font-size: 24px;
+  }
+  .price-note {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+    font-size: 13px;
+    color: var(--ink-3);
+    font-style: italic;
+  }
+
+  /* heads-up box */
+  .headsup {
+    background: var(--cream-2);
+    border-left: 3px solid var(--accent-2);
+    padding: 20px 24px;
+    border-radius: 0 4px 4px 0;
+    margin-top: 24px;
+  }
+  .headsup-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-2);
+    margin-bottom: 8px;
+  }
+  .headsup-body {
+    font-size: 14px;
+    color: var(--ink-2);
+    line-height: 1.55;
+  }
+
+  /* founders */
+  .founders {
+    background: var(--cream-2);
+    border-radius: 4px;
+    padding: 32px;
+    border: 1px solid var(--line);
+  }
+  .founders-name {
+    font-family: 'Instrument Serif', serif;
+    font-size: 20px;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+  .founders-role {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-3);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .founders-body {
+    font-size: 15px;
+    color: var(--ink-2);
+    line-height: 1.6;
+  }
+
+  /* CTA */
+  .cta-row {
+    margin-top: 36px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 22px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid var(--ink);
+    background: var(--ink);
+    color: var(--cream);
+    transition: transform 120ms ease, background 120ms ease;
+    cursor: pointer;
+  }
+  .btn:hover { transform: translateY(-1px); background: var(--accent); border-color: var(--accent); }
+  .btn.ghost {
+    background: transparent;
+    color: var(--ink);
+  }
+  .btn.ghost:hover { background: var(--ink); color: var(--cream); }
+  .btn .arrow { transition: transform 200ms ease; }
+  .btn:hover .arrow { transform: translateX(3px); }
+
+  .contact-line {
+    margin-top: 20px;
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    color: var(--ink-3);
+    letter-spacing: 0.04em;
+  }
+  .contact-line a:hover { color: var(--ink); text-decoration: underline; }
+
+  /* footer */
+  footer {
+    margin-top: 96px;
+    padding: 48px 24px;
+    border-top: 1px solid var(--line);
+    background: var(--cream-2);
+  }
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 32px;
+  }
+  @media (max-width: 720px) {
+    .footer-inner { grid-template-columns: 1fr; gap: 24px; }
+  }
+  .footer-col-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-3);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .footer-links { display: flex; flex-direction: column; gap: 8px; }
+  .footer-links a { font-size: 14px; color: var(--ink-2); }
+  .footer-links a:hover { color: var(--ink); }
+  .disclaimer {
+    font-size: 12px;
+    color: var(--ink-3);
+    line-height: 1.6;
+    font-style: italic;
+  }
+  .built {
+    margin-top: 32px;
+    text-align: center;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-3);
+    letter-spacing: 0.06em;
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="/" class="brand">Learners <em>Lab</em></a>
+    <span class="meta">Aavishkaar · Summer 2026</span>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="crumbs">
+    <a href="/">home</a>
+    <span class="sep">/</span>
+    <span>aavishkaar</span>
+  </div>
+  <h1>Five days of <em>Math &amp; Science</em>, in the Dhauladhars, with your child.</h1>
+  <p class="lede">
+    A parent–child STEM camp at Aavishkaar's campus in Palampur. You and your 9–12 year old explore Math and Science together — through nature, hands-on activities, and the kind of slow attention a hill town gives you.
+  </p>
+</section>
+
+<!-- FACT STRIP -->
+<div class="facts">
+  <div class="facts-grid">
+    <div class="fact">
+      <div class="fact-label">Dates</div>
+      <div class="fact-value">8–12 June</div>
+      <div class="fact-sub">2026 · 5 days</div>
+    </div>
+    <div class="fact">
+      <div class="fact-label">Location</div>
+      <div class="fact-value">Palampur</div>
+      <div class="fact-sub">Aavishkaar Center, HP</div>
+    </div>
+    <div class="fact">
+      <div class="fact-label">Ages</div>
+      <div class="fact-value">9–12</div>
+      <div class="fact-sub">with parents</div>
+    </div>
+    <div class="fact">
+      <div class="fact-label">Timing</div>
+      <div class="fact-value">8 AM – 1 PM</div>
+      <div class="fact-sub">incl. breakfast &amp; lunch</div>
+    </div>
+  </div>
+</div>
+
+<!-- TAGS -->
+<div class="tags">
+  <span class="tag primary">parent–child</span>
+  <span class="tag">math</span>
+  <span class="tag">science</span>
+  <span class="tag">nature-linked</span>
+  <span class="tag">residential (you arrange stay)</span>
+  <span class="tag">hill camp</span>
+</div>
+
+<!-- ABOUT -->
+<section class="block">
+  <h2 class="block-title">About this camp</h2>
+  <div class="block-prose">
+    <p>
+      Aavishkaar runs this as a family camp — children and parents make discoveries together, instead of the usual drop-off-and-pick-up model. You're not watching from the sidelines; you're learning alongside.
+    </p>
+    <p>
+      Five mornings, 8 AM to 1 PM. Breakfast and lunch are part of the day. The activities are hands-on Math and Science — some indoors, some out in the foothills of the Dhauladhars. It's structured but unhurried.
+    </p>
+    <p>
+      The campus itself is quiet. Trees, hills, no rush. That's part of the design — the slowing down is the point.
+    </p>
+  </div>
+</section>
+
+<!-- PRICING + LOGISTICS -->
+<section class="block">
+  <div class="two-col">
+    <div>
+      <h2 class="block-title">Pricing</h2>
+      <div class="pricing-card" style="margin-top: 16px;">
+        <div class="price-row">
+          <span class="price-label">1 child + parents</span>
+          <span class="price-amt">₹33,000</span>
+        </div>
+        <div class="price-row">
+          <span class="price-label">2 children + parents</span>
+          <span class="price-amt">₹52,000</span>
+        </div>
+        <div class="price-note">
+          Covers the camp, breakfast, and lunch. Does <strong>not</strong> include accommodation or travel.
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h2 class="block-title">A few logistics</h2>
+      <div class="block-prose" style="font-size: 15px;">
+        <p>
+          Palampur sits in Himachal Pradesh's Kangra valley. The nearest airports are Dharamshala (Gaggal, ~1 hr drive) and Chandigarh (~5 hr drive). Pathankot is the closest railway station.
+        </p>
+        <p>
+          Accommodation isn't bundled — you'll book your own stay nearby. For stay recommendations, contact Aavishkaar directly.
+        </p>
+      </div>
+
+      <div class="headsup">
+        <div class="headsup-title">heads up</div>
+        <div class="headsup-body">
+          This is a parent–child camp, not a drop-off. At least one parent attends every session with the child. Plan your trip and stay around the full 5 days.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDERS -->
+<section class="block">
+  <div class="founders">
+    <div class="founders-name">Sandhya &amp; Sarit</div>
+    <div class="founders-role">founders · aavishkaar</div>
+    <p class="founders-body">
+      IIT/NIT alumni with PhDs from the US, who moved back to India to build something for young minds in Math and Science. They started Aavishkaar in 2014, and now deliver hands-on STEM education to remote schools and communities across India. The Palampur campus is where they bring families in for camps like this one.
+    </p>
+  </div>
+</section>
+
+<!-- REGISTER -->
+<section class="block">
+  <h2 class="block-title">Registering &amp; questions</h2>
+  <p class="block-prose">
+    Registrations are handled by Aavishkaar directly. We're just helping you find it.
+  </p>
+  <div class="cta-row">
+    <a href="mailto:programs@aavishkaarcenter.org?subject=STEM%20Camp%20June%208%E2%80%9312%202026%20%E2%80%94%20enquiry" class="btn">
+      Email Aavishkaar <span class="arrow">→</span>
+    </a>
+    <a href="https://wa.me/917807071348" target="_blank" rel="noopener" class="btn ghost">
+      WhatsApp / Call <span class="arrow">→</span>
+    </a>
+  </div>
+  <div class="contact-line">
+    <a href="mailto:programs@aavishkaarcenter.org">programs@aavishkaarcenter.org</a> &nbsp;·&nbsp; +91 78070 71348
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-col-title">Learners Lab</div>
+      <p class="disclaimer">
+        For information purposes only. Learners Lab is not affiliated with Aavishkaar. All program details, pricing, and logistics are set by Aavishkaar — please confirm directly with them before booking travel.
+      </p>
+    </div>
+    <div>
+      <div class="footer-col-title">Other providers</div>
+      <div class="footer-links">
+        <a href="/vascsc">VASCSC</a>
+        <a href="/inme">INME</a>
+        <a href="/mesa">Mesa</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">More</div>
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/manifesto">Why we built this</a>
+      </div>
+    </div>
+  </div>
+  <div class="built">Built with iView Labs</div>
+</footer>
+
+</body>
+</html>
