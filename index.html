@@ -173,38 +173,6 @@
     text-transform: none;
   }
 
-  /* Recent update note */
-  .recent-note {
-    font-size: 13px;
-    color: var(--ink-soft);
-    margin-bottom: 18px;
-    padding: 10px 14px;
-    background: #fbf3e3;
-    border: 1px solid #f0e0b8;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    flex-wrap: wrap;
-  }
-  .recent-note em {
-    font-family: 'Instrument Serif', serif;
-    font-style: italic;
-    color: var(--forest);
-    font-size: 14px;
-  }
-  .recent-star {
-    color: var(--rust);
-    font-size: 14px;
-  }
-  .recent-date {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    color: var(--mute);
-    margin-left: auto;
-    letter-spacing: 0.03em;
-  }
-
   /* Providers */
   .providers {
     display: flex;
@@ -230,6 +198,43 @@
     border-color: var(--ink);
     background: #fff;
     transform: translateY(-1px);
+  }
+  .provider.is-new {
+    background: #fbf3e3;
+    border-color: #ecd99a;
+    box-shadow: 0 1px 0 rgba(201, 74, 26, 0.06), 0 8px 24px -12px rgba(201, 74, 26, 0.18);
+  }
+  .provider.is-new::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 14px; bottom: 14px;
+    width: 3px;
+    background: var(--rust);
+    border-radius: 0 2px 2px 0;
+  }
+  .provider.is-new:hover {
+    background: #fff8e6;
+    border-color: var(--rust);
+  }
+  .new-badge {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: var(--rust);
+    color: var(--cream);
+    padding: 3px 8px 3px 9px;
+    border-radius: 100px;
+    font-weight: 500;
+    line-height: 1.4;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .new-badge::before {
+    content: '✻';
+    font-size: 11px;
+    line-height: 1;
   }
   .provider-left { flex: 1; min-width: 0; }
   .provider-head {
@@ -458,12 +463,20 @@
     <span class="count">four, growing slowly</span>
   </div>
 
-  <div class="recent-note">
-    <span class="recent-star">✻</span>
-    <em>just added:</em> Aavishkaar — Parent–Child STEM Camp <span class="recent-date">27 apr</span>
-  </div>
-
   <div class="providers">
+    <a href="/aavishkaar" class="provider is-new">
+      <div class="provider-left">
+        <div class="provider-head">
+          <span class="live-dot"></span>
+          <span class="provider-name">Aavishkaar</span>
+          <span class="new-badge">just added</span>
+        </div>
+        <div class="provider-pitch">5 days of math &amp; science in the Himalayan foothills. <em>You go too — it's a family camp.</em></div>
+        <div class="provider-meta">Ages 9–12 with parents · Palampur, HP · 8–12 June</div>
+      </div>
+      <span class="provider-arrow">→</span>
+    </a>
+
     <a href="/vascsc" class="provider">
       <div class="provider-left">
         <div class="provider-head">
@@ -496,18 +509,6 @@
         </div>
         <div class="provider-pitch">A 2-week summer school where teens build real businesses. <em>Not slides. Actual revenue.</em></div>
         <div class="provider-meta">Grades 9–12 · Bangalore · 2-week summer intensive</div>
-      </div>
-      <span class="provider-arrow">→</span>
-    </a>
-
-    <a href="/aavishkaar" class="provider">
-      <div class="provider-left">
-        <div class="provider-head">
-          <span class="live-dot"></span>
-          <span class="provider-name">Aavishkaar</span>
-        </div>
-        <div class="provider-pitch">5 days of math &amp; science in the Himalayan foothills. <em>You go too — it's a family camp.</em></div>
-        <div class="provider-meta">Ages 9–12 with parents · Palampur, HP · 8–12 June</div>
       </div>
       <span class="provider-arrow">→</span>
     </a>
